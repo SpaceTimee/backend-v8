@@ -7,7 +7,7 @@ Write-Output "=====[ Getting Depot Tools ]====="
 Invoke-WebRequest -Uri "https://storage.googleapis.com/chrome-infra/depot_tools.zip" -OutFile "depot_tools.zip"
 Expand-Archive -Path "depot_tools.zip" -DestinationPath "."
 $env:PATH = "$PWD\depot_tools;$env:PATH"
-$env:GYP_MSVS_VERSION = "2022"
+$env:GYP_MSVS_VERSION = "2019"
 $env:DEPOT_TOOLS_WIN_TOOLCHAIN = "0"
 & gclient
 
